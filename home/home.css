@@ -1,0 +1,341 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+    box-sizing: border-box;
+    
+}
+
+.column {
+    
+    float: left;
+    width: 12%;
+    padding: 5%;
+    
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+    
+}
+
+
+
+/* button----- */
+
+.btn {
+    border-radius: 0px 0px 0px 0px;
+    background-color: #BEBCBC ;
+    padding: 14px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    border: #000000;
+}
+.btn:hover {background: #929292;}
+.success {color: #999999;}
+
+
+/* ------------------- */
+
+.header {
+    text-align: right;
+    display: block;
+	width: 100%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background: rgba(255, 255, 255, 0.35);
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* nevigation bar --------------------------------- */
+body {
+    
+    font-family: "Lato", sans-serif;
+}
+
+.fixednav{
+    position:fixed;
+    z-index: 1;
+    width:100% ;
+    height: auto;
+    padding-left:1%;
+    padding-right: 1%;
+    background-color:#292929;
+}
+
+.sidenav {
+    
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #E6E4E4;
+    overflow-x: hidden;
+    transition: 2s;
+    padding-top: 130px;
+    
+}
+
+.sidenav a {
+    padding: 8px 8px 10px 2px;
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+    
+}
+
+.openNav span:hover{
+    color: skyblue;
+}
+
+
+.sidenav a:hover {
+    color: skyblue;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 9%;
+    right: 20px;
+    font-size: 30px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 100%) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+
+
+
+
+.dropbtn {
+    background-color: transparent;
+    color: #8D8D8B;
+    width: 150px;
+    height: 37px;
+    font-size: 14px;
+    border: 3px solid #8D8D8B;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    color: black;
+    font-size: 16px;
+    background-color: #8D8D8B;
+    width: 250px;
+    height: auto;
+    box-shadow: 0px 8px 113px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 20px;
+    text-decoration: none;
+    
+}
+
+.dropdown-content a:hover {background-color: skyblue;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn  {background-color: transparent; }
+
+/* --------------------- */
+
+/* line behaind the text-------- */
+
+h1 {
+    font: 33px sans-serif;
+    margin-top: 30px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    z-index: -1;
+}
+
+
+h1 span { 
+    /* to hide the lines from behind the text, you have to set the background color the same as the container */ 
+    background: #E6E4E4; 
+    padding: 0 15px; 
+}
+
+ 
+
+h1.double:after {
+    border-bottom: 1px solid #A8A8A8;
+    /* -webkit-box-shadow: 0 1px 0 0 red;
+    -moz-box-shadow: 0 1px 0 0 red; */
+    box-shadow: 0 1px 0 0 #A8A8A8;
+    content: "";
+    margin: 0 auto; /* this centers the line to the full width specified */
+    position: absolute;
+    top: 45%; left: 8%; right: 8%;
+    
+    z-index: -1;
+}
+
+
+/* ----------------------- */
+
+/* table--------------- */
+
+
+
+table td{
+    border: 1px solid #8D8D8B;
+    border-collapse: 10;
+    background-color:#E6E4E4;
+    color: black;
+    
+
+}
+table td:hover:not(.active) {
+    background-color:skyblue;
+}
+
+
+
+/* -------------------------- */
+
+/* image model------------ */
+body {font-family: Arial, Helvetica, sans-serif;}
+
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color:white;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #FFFFFF;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
+
+/* -------------------------- */
+
+
+/* footer table--------------- */
+
+table a{
+    color: black;
+}
+table a :hover{
+    color: skyblue;
+}
+
+table td{
+    border: 1px solid #8D8D8B;
+    border-collapse: 10;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
